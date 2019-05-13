@@ -10,7 +10,7 @@ class PostImagesController < ApplicationController
     	redirect_to post_images_path
     end
 	def index
-		@post_images = PostImage.all
+		 @post_images = PostImage.page(params[:page]).reverse_order
 	end
 	def show
 		@post_image = PostImage.find(params[:id])
