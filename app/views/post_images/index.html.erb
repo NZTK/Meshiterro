@@ -17,9 +17,9 @@
                 <div class="block-content">
                   <%= image_tag('sample-author1.jpg', class: "img-circle pull-left profile-thumb") %>
                   <h3 class="block-title">
-         <%= link_to post_image_path(post_image.id) do %>
+                  <%= link_to post_image_path(post_image.id) do %>
                      <i class="fa fa-map-marker"></i><%= post_image.shop_name %>
-         <% end %>
+                  <% end %>
                   </h3>
                   <p><%= post_image.caption %></p>
                   <ul class="inline-meta">
@@ -34,9 +34,9 @@
               </div>
             </div>
           <% end %>
+          <%= paginate@post_images,class: "paginate" %>
         </div>
       </div>
     </div>
   </div>
 </section>
-<%= paginate@post_images,class: "paginate" %>
